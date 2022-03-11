@@ -11,12 +11,12 @@ alphabetList = string.ascii_lowercase
 alphabetList = list(map(chr, range(97, 122+1))) # ['a', 'b', 'c', 'd', 'e',
 
 # abcdef~xyz에서 a부터 돌면서
-# for alphabet in alphabetList:
-#     # a가 word안에 있으면, 위치(index)를 출력, 아니면 -1 출력
-#     if alphabet in word:
-#         print(word.index(alphabet), end=' ')
-#     else:
-#         print(-1, end=' ')
+for alphabet in alphabetList:
+    # a가 word안에 있으면, 위치(index)를 출력, 아니면 -1 출력
+    if alphabet in word:
+        print(word.index(alphabet), end=' ')
+    else:
+        print(-1, end=' ')
 
 # 선생님
 # O(N^2)
