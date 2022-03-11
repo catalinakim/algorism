@@ -7,37 +7,43 @@ numList = [-1, 0, 1, 2, -1, -4]
 #          i   j       k
 #          i   j          k
 #          0   1   2   3  4  5
+
 # 풀이1. 브루트 포스(가능한 경우를 모두 계산하는 방법)
+class Solution:
+    def samsum(self, nums: List[int]) -> List[List[int]]:
+    # 에러발생: samsum() missing 1 required positional argument: 'nums’ -> 클래스, init, main
+    # def samsum(nums):
+        results = []
+        nums.sort()
 
-# def samsum(self, nums: List[int]) -> List[List[int]]:
-#     -> 에러발생: samsum() missing 1 required positional argument: 'nums’
-def samsum(nums):
-    results = []
-    nums.sort()
-
-    # 브루트 포스 n^3 반복
-    for i in range(len(nums) - 2):
-        # 중복된 값 건너뛰기
-        # i가 2번째 돌 때부터(i=1), 이전꺼와 숫자가 같으면(처음에는 이전숫자가 없어서 비교할꺼가 없으니까)
-        # continue(아래 코드를 실행하지 않고 건너뜀)
-        if i > 0 and nums[i] == nums[i - 1]:
-            continue
-        for j in range(i + 1, len(nums) - 1):  # range(1, 5) = 4번 반복
-            # j가 처음 말고, 그다음 돌 때부터 이전 숫자와 같은지 비교
-            if j > i + 1 and nums[j] == nums[j - 1]:
+        # 브루트 포스 n^3 반복
+        for i in range(len(nums) - 2):
+            # 중복된 값 건너뛰기
+            # i가 2번째 돌 때부터(i=1), 이전꺼와 숫자가 같으면(처음에는 이전숫자가 없어서 비교할꺼가 없으니까)
+            # continue(아래 코드를 실행하지 않고 건너뜀)
+            if i > 0 and nums[i] == nums[i - 1]:
                 continue
-            for k in range(j + 1, len(nums)):  # range(2, 6)
-                if k > j + 1 and nums[k] == nums[k - 1]:
+            for j in range(i + 1, len(nums) - 1):  # range(1, 5) = 4번 반복
+                # j가 처음 말고, 그다음 돌 때부터 이전 숫자와 같은지 비교
+                if j > i + 1 and nums[j] == nums[j - 1]:
                     continue
-                print('i:', i, ' j:', j, ' k:', k)
-                sum = nums[i] + nums[j] + nums[k]
-                if sum == 0:  # 합이 0일때 정답List에 추가
-                    results.append([nums[i], nums[j], nums[k]])
+                for k in range(j + 1, len(nums)):  # range(2, 6)
+                    if k > j + 1 and nums[k] == nums[k - 1]:
+                        continue
+                    print('i:', i, ' j:', j, ' k:', k)
+                    sum = nums[i] + nums[j] + nums[k]
+                    if sum == 0:  # 합이 0일때 정답List에 추가
+                        results.append([nums[i], nums[j], nums[k]])
 
-    return results
+        return results
 
 # 풀이2. 투 포인터
 # 한 개의 변수를 고정시켜두고 두 개의 변수는 투 포인터로 간격을 좁혀가면서 합을 계산
+
+if __name__ == '__main__':
+    s1 = Solution()
+    s = [-1, 0, 1, 2, -1, -4]
+    print(s1.samsum(s))
 
 def samsum2(nums):
     results = []
@@ -77,6 +83,7 @@ def samsum2(nums):
 
     return results
 
-result = samsum(numList)
-print(result)
+# s = Solution
+# result = s.samsum(numList)
+# print(result)
 
