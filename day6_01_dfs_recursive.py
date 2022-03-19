@@ -26,6 +26,38 @@ def island_dfs_recursive(grid):
 
     return cnt
 
+def myIsland(grid): # 혼자안되서 위에 보고함
+    count = 0
+
+    def bfs(x, y):
+        if x<0 or x>=len(grid) or y<0 or y>=len(grid[0]) or grid[x][y]=='0':
+            return
+        grid[x][y] = '0'  # 방문처리
+        bfs(x+1,y)
+        bfs(x-1,y)
+        bfs(x,y+1)
+        bfs(x,y-1)
+        return
+
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j] != '1':
+                continue
+            count += 1
+            bfs(i,j)
+    print(count)
+    return count
+
+var = myIsland(grid=[["1", "1", "1", "1", "0"],
+                     ["1", "1", "0", "1", "0"],
+                     ["1", "1", "0", "0", "0"],
+                     ["0", "0", "0", "0", "0"]]) == 1
+var2 = myIsland(grid=[["1", "1", "0", "0", "0"],
+                    ["1", "1", "0", "0", "0"],
+                    ["0", "0", "1", "0", "0"],
+                    ["0", "0", "0", "1", "1"] ]) == 3
+print(var)
+print(var2)
 
 assert island_dfs_recursive(grid=[
     ["1", "1", "1", "1", "0"],
@@ -64,4 +96,8 @@ def factorial(n):
         print('재귀 후 :',n,'*', recur,'-> return',n*recur)
         return n * recur
 
-print(factorial(5))
+# print(factorial(5))
+
+# 리스트
+lst = ['a','b','c','d']
+# print(lst[1,2]) # 틀린 문법
