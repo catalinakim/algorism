@@ -37,11 +37,11 @@ class Solution:
         return root
 
 # 리트코드 Input tip
-a = TreeNode(4, TreeNode(2,TreeNode(1),TreeNode(3)), TreeNode(7,TreeNode(6),TreeNode(9)))
+# a = TreeNode(4, TreeNode(2,TreeNode(1),TreeNode(3)), TreeNode(7,TreeNode(6),TreeNode(9)))
 
-# o = Solution()
-# root = [4,2,7,1,3,6,9]
-# print(o.invertTree(make_tree_by(root, 0)))
+o = Solution()
+root = [4,2,7,1,3,6,9]
+print(o.invertTree(make_tree_by(root, 0)))
 
 # 재귀 LIFO
 
