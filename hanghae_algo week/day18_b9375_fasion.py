@@ -1,7 +1,7 @@
 # https://www.acmicpc.net/problem/9375
 
 import sys
-sys.stdin = open("input.txt","r")
+sys.stdin = open("input.txt", "r")
 
 n = int(input())
 for _ in range(n):

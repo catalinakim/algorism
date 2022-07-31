@@ -3,7 +3,7 @@
 import sys
 
 #입력을 파일로 설정: https://itcrowd2016.tistory.com/81
-sys.stdin = open("input.txt","r")
+sys.stdin = open("../input.txt", "r")
 
 class Node:
     def __init__(self, data):  # (self, data, next = None)  # next없을때 값
