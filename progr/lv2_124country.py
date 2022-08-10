@@ -2,7 +2,7 @@
 
 import math
 # from IPython.display import display
-from convert10toN_notation import convert
+from convert10toNnotation import convert
 # from pandas import Series, DataFrame, set_option
 import pandas as pd
 
