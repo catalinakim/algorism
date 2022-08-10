@@ -1,5 +1,5 @@
 # https://www.acmicpc.net/problem/11726
-# 2×n 타일링 - 런타임 에러
+# 2×n 타일링 - 런타임 에러(index error) 해결
 def dp(n):
     lst = [0 for index in range(n+1)]
     # if n == 1:
