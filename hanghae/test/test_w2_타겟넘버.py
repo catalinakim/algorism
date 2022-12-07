@@ -30,11 +30,11 @@ def solution(numbers, target): # 다른사람풀이보고 튜터디버그 후 �
         # for i in range(idx, len(numbers)):
         # if sum + numbers[idx] == target:
         #     print('if1')
-        #     sum += dfs(idx+1)
+        #     sum += dfs_bfs(idx+1)
         #     answer += 1
-        # if sum - dfs(idx) == target:
+        # if sum - dfs_bfs(idx) == target:
         #     print('if2')
-        #     sum -= dfs(idx)
+        #     sum -= dfs_bfs(idx)
         #     answer += 1
         # return sum
         # 다음 인덱스와 (앞에서부터) 지금까지의 합  ↗ ↙ ↖ ↘ → ← ∨ ∧  +1-1+1-1+1 이런식 출력가능?

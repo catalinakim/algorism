@@ -74,4 +74,4 @@ print(len(visited)-1)
 2 3
 '''
 
-# bfs, dfs 방식 풀이 : https://chancoding.tistory.com/60
+# bfs, dfs_bfs 방식 풀이 : https://chancoding.tistory.com/60

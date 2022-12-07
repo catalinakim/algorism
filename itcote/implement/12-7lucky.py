@@ -1,6 +1,6 @@
-# n = int(input())
-# n = 123456
-n = 123402
+# https://www.acmicpc.net/problem/18406
+n = int(input())
+# n = 123402
 
 le = len(str(n))
 
@@ -31,6 +31,8 @@ fSum = sum(fList)
 bSum = sum(list(map(int, str(back))))
 # 1-1-2-2. for한줄
 fList = [int(i) for i in str(front)]
+fSum = sum(fList)
+bSum = sum([int(i) for i in str(back)])
 print(fList)
 # 1-1-2-3. eval 문자열 식의 계산결과값
 fSum = eval("+".join(str(front)))
@@ -51,3 +53,14 @@ print(lst[:le])
 print(lst[le:])
 result = "LUCKY" if sum(lst[:le]) == sum(lst[le:]) else "READY"
 print(result)
+
+# 백준 제출용
+n = int(input())
+
+le = len(str(n))
+le = le // 2
+
+lst = list(map(int, str(n)))
+result = "LUCKY" if sum(lst[:le]) == sum(lst[le:]) else "READY"
+print(result)
+

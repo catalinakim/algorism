@@ -43,15 +43,15 @@ def dfs(V):                # V = 1                V=4                    V=2
         # 방문안했으면 실행(이미 방문한 것은 부모노드)
         if not visited[i]: # visited[4]가 false면  1은 방문했고, 2는 False  <-
             answer[i]=V    # answer[4]=1          answer[2]=4
-            dfs(i)         # dfs(4)               dfs(2)
+            dfs(i)         # dfs_bfs(4)               dfs_bfs(2)
 #                                                 i = 7 방문안했어서
 #                                                 answer[7]=4
-#                                                 dfs(7)
+#                                                 dfs_bfs(7)
 #                                                 i = 4 방문했어서 <-
 #                                              <- 7까지 다 돌아서
-#                          i=6 방문안했어서 answer[6]=1넣고 dfs(6)                     for 끝나서 dfs 종료
-#                           6 방문처리하고 [1, 3] 1은 방문했고, answer[3]=6 dfs(3)  for끝나서 --^
-#                           3 방문처리하고 [5, 6] answer[5]=3 dfs(5)  6방문했어서 --^
+#                          i=6 방문안했어서 answer[6]=1넣고 dfs_bfs(6)                     for 끝나서 dfs_bfs 종료
+#                           6 방문처리하고 [1, 3] 1은 방문했고, answer[3]=6 dfs_bfs(3)  for끝나서 --^
+#                           3 방문처리하고 [5, 6] answer[5]=3 dfs_bfs(5)  6방문했어서 --^
 #                           5 방문처리하고 [3] 3은 이미 방문했어서  ---^
 
 dfs(1) # 루트 1부터 탐색 시작

@@ -35,6 +35,6 @@ def solution(grid):
 # print(grid[0][2])
 print(solution(grid))
 
-# dfs
+# dfs_bfs
 
 # 비슷유형: https://www.acmicpc.net/problem/14502
